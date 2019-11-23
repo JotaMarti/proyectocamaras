@@ -26,60 +26,39 @@ let triangulos = {
   }
 };
 
-//A = 180 - B - C;
 
-//b = (a * Math.sin(toRadian(B))) / Math.sin(toRadian(A));
+let tostada ='valores';
 
-//console.log(b);
+function recogeDatosFormulario(){
 
-
-const formulario = document.getElementById("formulario").addEventListener("submit", e => {
-  e.preventDefault();
-  triangulos.datosIntroducidos.altura = parseInt(document.getElementById("altura").value);
-  triangulos.datosIntroducidos.tilt = parseInt(document.getElementById("tilt").value);
-  triangulos.datosIntroducidos.fovCamara = parseInt(document.getElementById("fov").value);
-
+    triangulos.datosIntroducidos.altura = parseInt(document.getElementById("altura").value);
+    triangulos.datosIntroducidos.tilt = parseInt(document.getElementById("tilt").value);
+    triangulos.datosIntroducidos.fovCamara = parseInt(document.getElementById("fov").value);
   let { fovCamara, tilt, altura } = triangulos.datosIntroducidos;
-  triangulos.trianguloSombra.Sladoa = altura;
-
-
-  triangulos.trianguloSombra.SanguloB = ANGULO_RECTO - tilt - fovCamara;
-  triangulos.trianguloSombra.SanguloA = MAX_ANGULO_TRIANGULO - triangulos.trianguloSombra.SanguloB - triangulos.trianguloSombra.SanguloC;
-
+    triangulos.trianguloSombra.Sladoa = altura;
+    triangulos.trianguloSombra.SanguloB = ANGULO_RECTO - tilt - fovCamara;
+    triangulos.trianguloSombra.SanguloA = MAX_ANGULO_TRIANGULO - triangulos.trianguloSombra.SanguloB - triangulos.trianguloSombra.SanguloC;
   let { SanguloA, SanguloB, SanguloC } = triangulos.trianguloSombra;
-
   let { Sladoa } = triangulos.trianguloSombra;
-
-  triangulos.trianguloSombra.Sladob = (Sladoa * Math.sin(toRadian(SanguloB))) / Math.sin(toRadian(SanguloA));
-  triangulos.trianguloSombra.Sladoc = (Sladoa * Math.sin(toRadian(SanguloC))) / Math.sin(toRadian(SanguloA));
-
+    triangulos.trianguloSombra.Sladob = (Sladoa * Math.sin(toRadian(SanguloB))) / Math.sin(toRadian(SanguloA));
+    triangulos.trianguloSombra.Sladoc = (Sladoa * Math.sin(toRadian(SanguloC))) / Math.sin(toRadian(SanguloA));
   let { Sladob, Sladoc } = triangulos.trianguloSombra;
-
-
-  triangulos.trianguloCamara.Cladoa = Sladoc;
-
-  triangulos.trianguloCamara.CanguloC = MAX_ANGULO_TRIANGULO - SanguloA;
-
-  triangulos.trianguloCamara.CanguloB = fovCamara;
-
-  triangulos.trianguloCamara.CanguloA = MAX_ANGULO_TRIANGULO - triangulos.trianguloCamara.CanguloB - triangulos.trianguloCamara.CanguloC;
-
-
+    triangulos.trianguloCamara.Cladoa = Sladoc;
+    triangulos.trianguloCamara.CanguloC = MAX_ANGULO_TRIANGULO - SanguloA;
+    triangulos.trianguloCamara.CanguloB = fovCamara;
+    triangulos.trianguloCamara.CanguloA = MAX_ANGULO_TRIANGULO - triangulos.trianguloCamara.CanguloB - triangulos.trianguloCamara.CanguloC;
   let { Cladoa, CanguloB, CanguloA } = triangulos.trianguloCamara;
+    triangulos.trianguloCamara.Cladob = (Cladoa * Math.sin(toRadian(CanguloB))) / Math.sin(toRadian(CanguloA));
 
-  triangulos.trianguloCamara.Cladob = (Cladoa * Math.sin(toRadian(CanguloB))) / Math.sin(toRadian(CanguloA));
+  alerta(`La sombra de este cámara es ${Math.round(Sladob * 100) / 100}m y la distancia máxima es : ${Math.round((triangulos.trianguloCamara.Cladob + Sladob) * 100) / 100}m`);
+  
+  }
 
-
-  alert(`La sombra de este cámara es ${Math.round(Sladob * 100) / 100}m y la distancia máxima es : ${Math.round((triangulos.trianguloCamara.Cladob + Sladob) * 100) / 100}m`);
-
-
-
-
-
-
-});
-
-
+  function alerta (datos){
+    alert(datos);
+     tostada = '<span>gracias por usar la calculadora</span>';
+    
+  }
 
 
 
