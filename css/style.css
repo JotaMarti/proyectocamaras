@@ -1,0 +1,48 @@
+body {
+    background-color: rgb(169, 215, 209);
+    font-family: "Open Sans", sans-serif;
+}
+
+
+h1 {
+    text-align: center;
+    width: 100%;
+}
+
+.row {
+    display: inline-block;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    margin: 10px;
+}
+
+.label{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+.input{
+    flex: 1;
+}
+
+
+.imagen{
+    margin-top: 40px;
+    width: 100%;
+}
+
+img{
+    width: 100%;
+}
+
+
+@media (max-width: 800px) {
+    .row{
+        flex-direction: column;
+    }
+}
