@@ -16,7 +16,7 @@
 <body>
 	<header>
 		<nav>
-			<div class="nav-wrapper">
+			<div class="nav-wrapper azulClaro">
 				<a href="#" class="brand-logo center">CALCULADORA VISIÓN CAMARAS VIGILANCIA</a>
 			</div>
 		</nav>
@@ -24,6 +24,8 @@
 	<br>
 	<section class="centro">
 		<div class="row">
+
+
 			<div class="col s12 m7 l6">
 				<div class="card card-redondeada">
 					<div class="card-content">
@@ -36,11 +38,21 @@
 								<input type="text" id="tilt"
 									placeholder="Introduzca el ángulo del tilt de la camara"><br>
 								<label for="altura"><i class="material-icons">file_upload</i> Altura de cámara </label>
-								<input type="text" id="altura" placeholder="Introduzca la altura a la que está situalda la camara"><br>
-
-										<button onclick="recogeDatosFormulario()" class="btn red right"><a  class="btn-envio" onclick="M.toast({html: tostada})">Calcular</a></button>
+								<input type="text" id="altura"
+									placeholder="Introduzca la altura a la que está situalda la camara"><br>
+								<div class="boton">
+									<button onclick="recogeDatosFormulario()" class="btn azulOscuro"><a
+											class="btn-envio" onclick="M.toast({html: tostada})">Calcular</a></button>
+								</div>
 							</fieldset>
 						</form>
+					</div>
+				</div>
+			</div>
+			<div class="col s12 m7 l6">
+				<div class="card card-redondeada">
+					<div class="card-content flex">
+						<img src="img/camaras.png" alt="">
 					</div>
 				</div>
 			</div>
@@ -48,10 +60,10 @@
 	</section>
 	<footer>
 		<div class="row">
-			<div class="col l12 s12 red">
+			<div class="col l12 s12 gris">
 				<h5 class="white-text">Calculadora para instalación de cámaras de vigilancia</h5>
 				<div class="footer-copyright">
-					<div class="container right">
+					<div class="container">
 						© 2019 Kahooters
 					</div>
 				</div>
