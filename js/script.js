@@ -43,7 +43,7 @@ let resultados = {
 let tostada = "valores";
 
 function recogeDatosFormulario() {
-  var Parent = document.getElementById("body");
+  var Parent = document.getElementById("tbody");
   while (Parent.hasChildNodes()) {
     Parent.removeChild(Parent.firstChild);
   }
