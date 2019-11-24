@@ -43,6 +43,10 @@ let resultados = {
 let tostada = "valores";
 
 function recogeDatosFormulario() {
+  var Parent = document.getElementById("body");
+  while (Parent.hasChildNodes()) {
+    Parent.removeChild(Parent.firstChild);
+  }
   triangulos.datosIntroducidos.altura = parseInt(document.getElementById("altura").value);
   triangulos.datosIntroducidos.tilt = parseInt(document.getElementById("tilt").value);
   triangulos.datosIntroducidos.fovCamara = parseInt(document.getElementById("fov").value);
