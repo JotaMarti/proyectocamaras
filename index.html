@@ -1,77 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
-	<!-- CDN Materialize CSS -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-	<!--Import Google Icon Font-->
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<title>Calculadora de sombra Camaras vigilancia</title>
-</head>
-
-<body>
-	<header>
-		<nav>
-			<div class="nav-wrapper azulClaro">
-				<a href="#" class="brand-logo center">CALCULADORA VISIÓN CAMARAS VIGILANCIA</a>
-			</div>
-		</nav>
-	</header>
-	<br>
-	<section class="centro">
-		<div class="row">
-			<div class="col s12 m7 l6">
-				<div class="card card-redondeada">
-					<div class="card-content">
-						<form action="#" id="formulario">
-							<fieldset>
-								<legend>Introduzca los datos para el cálculo</legend>
-								<label for="fov"><i class="material-icons">change_history</i> FOV de la cámara </label>
-								<input type="text" id="fov" placeholder="Introduzca el FOV de la cámara"><br>
-								<label for="tilt"><i class="material-icons">chevron_left</i> Ángulo Tilt </label>
-								<input type="text" id="tilt"
-									placeholder="Introduzca el ángulo del tilt de la camara"><br>
-								<label for="altura"><i class="material-icons">file_upload</i> Altura de cámara </label>
-								<input type="text" id="altura"
-									placeholder="Introduzca la altura a la que está situalda la camara"><br>
-								<div class="boton">
-									<button onclick="recogeDatosFormulario()" class="btn azulOscuro">
-										<a class="btn-envio" onclick="M.toast({html: tostada})">Calcular</a>
-									</button>
-								</div>
-							</fieldset>
-						</form>
-					</div>
-				</div>
-			</div>
-			<div class="col s12 m7 l6">
-				<div class="card card-redondeada">
-					<div class="card-content flex">
-						<img src="img/camaras.png" alt="">
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<footer>
-		<div class="row">
-			<div class="col l12 s12 gris">
-				<h5 class="white-text">Calculadora para instalación de cámaras de vigilancia</h5>
-				<div class="footer-copyright">
-					<div class="container">
-						© 2019 Kahooters
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<script src="js/script.js"></script>
-	<!-- CDN Materialize JS -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-</body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!-- CDN Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <title>Calculadora de sombra Camaras vigilancia</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-wrapper azulClaro">
+          <a href="#" class="brand-logo center">CALCULADORA VISIÓN CAMARAS VIGILANCIA</a>
+        </div>
+      </nav>
+    </header>
+    <br />
+    <section class="centro">
+      <div class="row">
+        <div class="col s12 m7 l6">
+          <div class="card card-redondeada">
+            <div class="card-content">
+              <form action="#" id="formulario">
+                <fieldset>
+                  <legend>Introduzca los datos para el cálculo</legend>
+                  <label for="fov"><i class="material-icons">change_history</i> FOV de la cámara</label>
+                  <input type="text" id="fov" placeholder="Introduzca el FOV de la cámara" /><br />
+                  <label for="tilt"><i class="material-icons">chevron_left</i> Ángulo Tilt</label>
+                  <input type="text" id="tilt" placeholder="Introduzca el ángulo del tilt de la camara" /><br />
+                  <label for="altura"><i class="material-icons">file_upload</i> Altura de cámara</label>
+                  <input type="text" id="altura" placeholder="Introduzca la altura a la que está situalda la camara" /><br />
+                  <div class="boton">
+                    <button onclick="recogeDatosFormulario()" class="btn azulOscuro">
+                      <a class="btn-envio" onclick="M.toast({html: tostada})">Calcular</a>
+                    </button>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m7 l6">
+          <div class="card card-redondeada">
+            <div class="card-content flex">
+              <img src="img/camaras.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="row">
+        <div class="col l12 s12 gris">
+          <h5 class="white-text">Calculadora para instalación de cámaras de vigilancia</h5>
+          <div class="footer-copyright">
+            <div class="container">
+              © 2019 Kahooters
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <!-- CDN Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </body>
 </html>
