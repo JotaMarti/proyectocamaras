@@ -61,13 +61,13 @@ img {
     font-size: 15px !important;
   }
 
-  .row .col.l6 {
+  /*.row .col.l6 {
     width: 50% !important;
-  }
+  }*/
 }
 
-@media only screen and (min-width: 601px) {
+/*@media only screen and (min-width: 601px) {
   .col.m7 {
     width: 100% !important;
   }
-}
+}*/
