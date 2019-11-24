@@ -43,10 +43,7 @@ let resultados = {
 let tostada = "valores";
 
 function recogeDatosFormulario() {
-  var Parent = document.getElementById("tbody");
-  while (Parent.hasChildNodes()) {
-    Parent.removeChild(Parent.firstChild);
-  }
+  borraTabla();
   triangulos.datosIntroducidos.altura = parseInt(document.getElementById("altura").value);
   triangulos.datosIntroducidos.tilt = parseInt(document.getElementById("tilt").value);
   triangulos.datosIntroducidos.fovCamara = parseInt(document.getElementById("fov").value);
@@ -77,21 +74,16 @@ function recogeDatosFormulario() {
   let contador = 1;
 
   for (let resultado in resultados) {
-    SanguloBB = 90 - fovCamara - contador;
-    SanguloAA = 180 - 90 - SanguloBB;
+    SanguloBB = ANGULO_RECTO - fovCamara - contador;
+    SanguloAA = MAX_ANGULO_TRIANGULO - ANGULO_RECTO - SanguloBB;
     resultados[resultado][0] = Math.round(((Sladoa * Math.sin(toRadian(SanguloBB))) / Math.sin(toRadian(SanguloAA))) * 100) / 100;
     SladoCC = (Sladoa * Math.sin(toRadian(SanguloC))) / Math.sin(toRadian(SanguloAA));
-    CanguloCC = 180 - SanguloAA;
-    CanguloAA = 180 - fovCamara - CanguloCC;
+    CanguloCC = MAX_ANGULO_TRIANGULO - SanguloAA;
+    CanguloAA = MAX_ANGULO_TRIANGULO - fovCamara - CanguloCC;
     resultados[resultado][1] = Math.round(((SladoCC * Math.sin(toRadian(CanguloB))) / Math.sin(toRadian(CanguloAA)) + resultados[resultado][0]) * 100) / 100;
     contador++;
   }
 
-  /*var myJSON = JSON.stringify(resultados);
-  let theDiv = document.getElementById("resultados");
-  for (let resultado in resultados) {
-    theDiv.innerHTML += String(resultados[resultado][0]);
-  }*/
   contador = 1;
   for (resultado in resultados) {
     var tableRef = document.getElementById("myTable").getElementsByTagName("tbody")[0];
@@ -116,4 +108,11 @@ function alerta(datos) {
 
 function toRadian(num) {
   return (num * Math.PI) / 180;
+}
+
+function borraTabla() {
+  var Parent = document.getElementById("tbody");
+  while (Parent.hasChildNodes()) {
+    Parent.removeChild(Parent.firstChild);
+  }
 }
