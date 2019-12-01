@@ -20,4 +20,4 @@ const ejecutaValidaciones = e => {
 };
 
 //Recogiendo el Evento del boton
-formulario.addEventListener("submit", ejecutaValidaciones);
+formulario.addEventListener("submit", ejecutaValidaciones(e));
