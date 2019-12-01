@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<!-- saved from url=(0024)http://127.0.0.1:5500/?# -->
+<html lang="es"><link type="text/css" id="dark-mode" rel="stylesheet" href="http://127.0.0.1:5500/?"><style type="text/css" id="dark-mode-custom-style"></style><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="./Calculadora de sombra Camaras vigilancia_files/style.css">
+    <!-- CDN Materialize CSS -->
+    <link rel="stylesheet" href="./Calculadora de sombra Camaras vigilancia_files/materialize.min.css">
+    <!--Import Google Icon Font-->
+    <link href="./Calculadora de sombra Camaras vigilancia_files/icon" rel="stylesheet">
+    <title>Calculadora de sombra Camaras vigilancia</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-wrapper azulClaro">
+          <a href="http://127.0.0.1:5500/?#" class="brand-logo center">CALCULADORA VISIÓN CAMARAS VIGILANCIA</a>
+        </div>
+      </nav>
+    </header>
+    <br>
+    <section class="centro">
+      <div class="row">
+        <div class="col s12 m12 l6">
+          <div class="card card-redondeada">
+            <div class="card-content">
+              <form action="http://127.0.0.1:5500/?#" id="formulario">
+                <fieldset>
+                  <legend>Introduzca los datos para el cálculo</legend>
+                  <label for="fov" class="active"><i class="material-icons">change_history</i> FOV de la cámara</label>
+                  <input type="text" id="fov" placeholder="Introduzca el FOV de la cámara" class="valid"><br>
+                  <label for="tilt" class="active"><i class="material-icons">chevron_left</i> Ángulo Tilt</label>
+                  <input type="text" id="tilt" placeholder="Introduzca el ángulo del tilt de la camara" class="valid"><br>
+                  <label for="altura" class="active"><i class="material-icons">file_upload</i> Altura de cámara</label>
+                  <input type="text" id="altura" placeholder="Introduzca la altura a la que está situalda la camara" class="input valid"><br>
+                  <div class="boton">
+                    <button type="submit" class="btn azulOscuro">CALCULAR</button>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m12 l6">
+          <div class="card card-redondeada">
+            <div class="card-content flex">
+              <img src="./Calculadora de sombra Camaras vigilancia_files/camaras.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m12 l12">
+          <div class="card card-redondeada">
+            <div class="card-content" id="resultados">
+              <table id="myTable">
+                <thead>
+                  <tr>
+                    <th>Tilt</th>
+                    <th>Camera Shadow</th>
+                    <th>Camera Max.Distance</th>
+                  </tr>
+                </thead>
+                <tbody id="tbody"><tr>
+            <td> 50</td> 
+            <td> 6.99</td>
+            <td> 12.59</td>
+         </tr><tr> </tr><tr>
+            <td> 49</td> 
+            <td> 7.32</td>
+            <td> 13.04</td>
+         </tr><tr> </tr><tr>
+            <td> 48</td> 
+            <td> 7.64</td>
+            <td> 13.51</td>
+         </tr><tr> </tr><tr>
+            <td> 47</td> 
+            <td> 7.98</td>
+            <td> 13.99</td>
+         </tr><tr> </tr><tr>
+            <td> 46</td> 
+            <td> 8.31</td>
+            <td> 14.49</td>
+         </tr><tr> </tr><tr>
+            <td> 45</td> 
+            <td> 8.66</td>
+            <td> 15</td>
+         </tr><tr> </tr><tr>
+            <td> 44</td> 
+            <td> 9.01</td>
+            <td> 15.53</td>
+         </tr><tr> </tr><tr>
+            <td> 43</td> 
+            <td> 9.37</td>
+            <td> 16.09</td>
+         </tr><tr> </tr><tr>
+            <td> 42</td> 
+            <td> 9.74</td>
+            <td> 16.66</td>
+         </tr><tr> </tr><tr>
+            <td> 41</td> 
+            <td> 10.12</td>
+            <td> 17.26</td>
+         </tr><tr> </tr><tr>
+            <td> 40</td> 
+            <td> 10.5</td>
+            <td> 17.88</td>
+         </tr><tr> </tr><tr>
+            <td> 39</td> 
+            <td> 10.9</td>
+            <td> 18.52</td>
+         </tr><tr> </tr><tr>
+            <td> 38</td> 
+            <td> 11.3</td>
+            <td> 19.2</td>
+         </tr><tr> </tr><tr>
+            <td> 37</td> 
+            <td> 11.72</td>
+            <td> 19.91</td>
+         </tr><tr> </tr><tr>
+            <td> 36</td> 
+            <td> 12.15</td>
+            <td> 20.65</td>
+         </tr><tr> </tr><tr>
+            <td> 35</td> 
+            <td> 12.59</td>
+            <td> 21.42</td>
+         </tr><tr> </tr><tr>
+            <td> 34</td> 
+            <td> 13.04</td>
+            <td> 22.24</td>
+         </tr><tr> </tr><tr>
+            <td> 33</td> 
+            <td> 13.51</td>
+            <td> 23.1</td>
+         </tr><tr> </tr><tr>
+            <td> 32</td> 
+            <td> 13.99</td>
+            <td> 24.01</td>
+         </tr><tr> </tr><tr>
+            <td> 31</td> 
+            <td> 14.49</td>
+            <td> 24.96</td>
+         </tr><tr> </tr><tr>
+            <td> 30</td> 
+            <td> 15</td>
+            <td> 25.98</td>
+         </tr><tr> </tr><tr>
+            <td> 29</td> 
+            <td> 15.53</td>
+            <td> 27.06</td>
+         </tr><tr> </tr><tr>
+            <td> 28</td> 
+            <td> 16.09</td>
+            <td> 28.21</td>
+         </tr><tr> </tr><tr>
+            <td> 27</td> 
+            <td> 16.66</td>
+            <td> 29.44</td>
+         </tr><tr> </tr><tr>
+            <td> 26</td> 
+            <td> 17.26</td>
+            <td> 30.75</td>
+         </tr><tr> </tr><tr>
+            <td> 25</td> 
+            <td> 17.88</td>
+            <td> 32.17</td>
+         </tr><tr> </tr><tr>
+            <td> 24</td> 
+            <td> 18.52</td>
+            <td> 33.69</td>
+         </tr><tr> </tr><tr>
+            <td> 23</td> 
+            <td> 19.2</td>
+            <td> 35.34</td>
+         </tr><tr> </tr><tr>
+            <td> 22</td> 
+            <td> 19.91</td>
+            <td> 37.13</td>
+         </tr><tr> </tr><tr>
+            <td> 21</td> 
+            <td> 20.65</td>
+            <td> 39.08</td>
+         </tr><tr> </tr><tr>
+            <td> 20</td> 
+            <td> 21.42</td>
+            <td> 41.21</td>
+         </tr><tr> </tr><tr>
+            <td> 19</td> 
+            <td> 22.24</td>
+            <td> 43.56</td>
+         </tr><tr> </tr><tr>
+            <td> 18</td> 
+            <td> 23.1</td>
+            <td> 46.17</td>
+         </tr><tr> </tr><tr>
+            <td> 17</td> 
+            <td> 24.01</td>
+            <td> 49.06</td>
+         </tr><tr> </tr><tr>
+            <td> 16</td> 
+            <td> 24.96</td>
+            <td> 52.31</td>
+         </tr><tr> </tr><tr>
+            <td> 15</td> 
+            <td> 25.98</td>
+            <td> 55.98</td>
+         </tr><tr> </tr><tr>
+            <td> 14</td> 
+            <td> 27.06</td>
+            <td> 60.16</td>
+         </tr><tr> </tr><tr>
+            <td> 13</td> 
+            <td> 28.21</td>
+            <td> 64.97</td>
+         </tr><tr> </tr><tr>
+            <td> 12</td> 
+            <td> 29.44</td>
+            <td> 70.57</td>
+         </tr><tr> </tr><tr>
+            <td> 11</td> 
+            <td> 30.75</td>
+            <td> 77.17</td>
+         </tr><tr> </tr><tr>
+            <td> 10</td> 
+            <td> 32.17</td>
+            <td> 85.07</td>
+         </tr><tr> </tr><tr>
+            <td> 9</td> 
+            <td> 33.69</td>
+            <td> 94.71</td>
+         </tr><tr> </tr><tr>
+            <td> 8</td> 
+            <td> 35.34</td>
+            <td> 106.73</td>
+         </tr><tr> </tr><tr>
+            <td> 7</td> 
+            <td> 37.13</td>
+            <td> 122.17</td>
+         </tr><tr> </tr><tr>
+            <td> 6</td> 
+            <td> 39.08</td>
+            <td> 142.72</td>
+         </tr><tr> </tr><tr>
+            <td> 5</td> 
+            <td> 41.21</td>
+            <td> 171.45</td>
+         </tr><tr> </tr><tr>
+            <td> 4</td> 
+            <td> 43.56</td>
+            <td> 214.51</td>
+         </tr><tr> </tr><tr>
+            <td> 3</td> 
+            <td> 46.17</td>
+            <td> 286.22</td>
+         </tr><tr> </tr><tr>
+            <td> 2</td> 
+            <td> 49.06</td>
+            <td> 429.54</td>
+         </tr><tr> </tr><tr>
+            <td> 1</td> 
+            <td> 52.31</td>
+            <td> 859.35</td>
+         </tr><tr> </tr></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="row">
+        <div class="col l12 s12 gris">
+          <h5 class="white-text">
+            Calculadora para instalación de cámaras de vigilancia
+          </h5>
+          <div class="footer-copyright">
+            <div class="container">
+              © 2019 Kahooters
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./Calculadora de sombra Camaras vigilancia_files/Main.js.descarga" type="module"></script>
+    <!-- CDN Materialize JS -->
+    <script src="./Calculadora de sombra Camaras vigilancia_files/materialize.min.js.descarga"></script>
+  <!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>

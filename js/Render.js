@@ -2,7 +2,10 @@ import { tbody } from "./Constantes.js";
 
 class Render {
   imprimeTabla = tabla => {
-    tabla.map((fila, index) => {
+    // BORRAR TABLA SI EXISTE
+    this.borraTabla();
+
+    tabla.reverse().map((fila, index) => {
       console.log(fila);
 
       // por cada fila inyectamos con INNERHTML
@@ -13,6 +16,12 @@ class Render {
             <td> ${fila.distanciaMax}</td>
          <tr> `;
     });
+  };
+
+  borraTabla = () => {
+    while (tbody.hasChildNodes()) {
+      tbody.removeChild(tbody.firstChild);
+    }
   };
 }
 export default Render;
