@@ -6,7 +6,8 @@ import validaFormulario from "./Validador.js";
 import Calculadora from "./Calculos.js";
 import Render from "./Render.js";
 
-const ejecutaValidaciones = () => {
+const ejecutaValidaciones = e => {
+  e.preventDefault();
   let validacion = new validaFormulario();
 
   const flagValidacion = validacion.validarFormulario(altura, tilt, fov);
